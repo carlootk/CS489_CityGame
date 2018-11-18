@@ -40,12 +40,13 @@ public class RotateCamera : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = target.position + currentOffset;
+		float mouseXPosition = Input.mousePosition.x;
 
-        if (Input.GetKey("q"))
+        if (mouseXPosition < 20 || Input.GetKey(KeyCode.Q))
         {
             movement = -1f * angularSpeed * Time.deltaTime;
         }
-        else if (Input.GetKey("e"))
+        else if (Screen.width - 20 < mouseXPosition || Input.GetKey(KeyCode.E))
         {
             movement = 1f * angularSpeed * Time.deltaTime;
         }

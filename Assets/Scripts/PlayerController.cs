@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public GunController gunC;
     public Text points;
     public GameObject panel;
+    public Transform relativeTransform;
     // Use this for initialization
     void Start()
     {
@@ -34,7 +35,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        input = Vector3.zero;
+        if (Input.GetKey(KeyCode.W)) input += relativeTransform.forward;
+        if (Input.GetKey(KeyCode.S)) input += -relativeTransform.forward;
+        if (Input.GetKey(KeyCode.A)) input += -relativeTransform.right;
+        if (Input.GetKey(KeyCode.D)) input += relativeTransform.right;
         moveV = input * speed;
         characterController.SimpleMove(moveV * Time.deltaTime);
         animator.SetFloat("For", input.magnitude);
