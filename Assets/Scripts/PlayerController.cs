@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Camera cam;
     private Transform playerTransform;
+    private CharacterController characterController;
     public GunController gunC;
     public Text points;
     public GameObject panel;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         cam = FindObjectOfType<Camera>();
         playerTransform = transform.GetChild(0);
         panel.SetActive(false);
+        characterController = GetComponent<CharacterController>();
 
     }
 
@@ -34,7 +36,8 @@ public class PlayerController : MonoBehaviour
     {
         input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         moveV = input * speed;
-        animator.SetFloat("Speed", moveV.magnitude);
+        characterController.SimpleMove(moveV * Time.deltaTime);
+        animator.SetFloat("For", input.magnitude);
         Ray camRay = cam.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
@@ -42,9 +45,10 @@ public class PlayerController : MonoBehaviour
         if (groundPlane.Raycast(camRay, out rayLength))
         {
             Vector3 lookPoint = camRay.GetPoint(rayLength);
-            // Debug.DrawLine(camRay.origin, lookPoint, Color.red);
+            Debug.DrawLine(camRay.origin, lookPoint, Color.red);
 
             playerTransform.LookAt(new Vector3(lookPoint.x, playerTransform.position.y, lookPoint.z));
+            // playerTransform.Rotate(0, 55, 0);
         }
 
         if (Input.GetButton("Fire1"))
@@ -67,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = moveV;
+        //rb.AddForce(moveV);
     }
 
     IEnumerator WaitForIt(float waitTime)

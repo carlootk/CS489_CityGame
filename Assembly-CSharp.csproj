@@ -61,8 +61,10 @@
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\QuitOnClick.cs" />
+     <Compile Include="Assets\Scripts\RotateCamera.cs" />
      <None Include="Assets\ToonSoldiers_demo\ToonSoldiers_demo.txt" />
      <None Include="Assets\Simple city plain\Read_me.txt" />
+     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/CLo/Documents/CS489_CityGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
