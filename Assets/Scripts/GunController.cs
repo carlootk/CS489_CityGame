@@ -14,6 +14,7 @@ public class GunController : MonoBehaviour {
 	private ParticleSystem muzzleParticle;
 	[SerializeField]
     public AudioClip gunFire;
+    public AudioSource gunAudio;
 
 
 	// Use this for initialization
@@ -26,7 +27,8 @@ public class GunController : MonoBehaviour {
 		if (isFiring && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
 			muzzleParticle.Play();
-            AudioSource.PlayClipAtPoint(gunFire, transform.position, 1f);
+            gunAudio.clip = gunFire;
+            gunAudio.Play();
 			var newBullet = (GameObject)Instantiate(bulletPrefab, gunEnd.position, gunEnd.rotation);
 			newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.up * bulletSpeed;
 			Destroy(newBullet, 2.0f);

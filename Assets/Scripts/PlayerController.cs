@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 {
 
     private Camera cam;
+    private Rigidbody rb;
     public Transform turretTransform;
     private CharacterController characterController;
     public GunController gunC;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
 
+        rb = GetComponent<Rigidbody>();
         cam = FindObjectOfType<Camera>();
         panel.SetActive(false);
         m_OriginalPitch = m_MovementAudio.pitch;
@@ -49,80 +51,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            foreach (GameObject wheelL in LeftWheels)
-            {
-                wheelL.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
-            }
-            //Right wheels rotate
-            foreach (GameObject wheelR in RightWheels)
-            {
-                wheelR.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
-            }
-            //left track texture offset
-            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
-            //right track texture offset
-            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
-            transform.Translate(new Vector3(0f, 0f, forwardSpeed * Time.deltaTime));
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            foreach (GameObject wheelL in LeftWheels)
-            {
-                wheelL.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
-            }
-            //Right wheels rotate
-            foreach (GameObject wheelR in RightWheels)
-            {
-                wheelR.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
-            }
-            //left track texture offset
-            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
-            //right track texture offset
-            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
-            transform.Translate(new Vector3(0f, 0f, -forwardSpeed * Time.deltaTime));
-        }
+        m_MovementInputValue = Input.GetAxisRaw("Vertical");
+        m_TurnInputValue = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            //Left wheels rotate
-            foreach (GameObject wheelL in LeftWheels)
-            {
-                wheelL.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
-            }
-            //Right wheels rotate
-            foreach (GameObject wheelR in RightWheels)
-            {
-                wheelR.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
-            }
-            //left track texture offset
-            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
-            //right track texture offset
-            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
-            //Rotate Tank
-            transform.Rotate(new Vector3(0f, -rotateSpeed * Time.deltaTime, 0f));
-        }
-        //On Right
-        if (Input.GetKey(KeyCode.D))
-        {
-            //Left wheels rotate
-            foreach (GameObject wheelL in LeftWheels)
-            {
-                wheelL.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
-            }
-            //Right wheels rotate
-            foreach (GameObject wheelR in RightWheels)
-            {
-                wheelR.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
-            }
-            //left track texture offset
-            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
-            //right track texture offset
-            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
-            //Rotate Tank
-            transform.Rotate(new Vector3(0f, rotateSpeed * Time.deltaTime, 0f));
-        }
         Ray camRay = cam.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
@@ -156,28 +87,122 @@ public class PlayerController : MonoBehaviour
         EngineAudio();
     }
 
+    private void FixedUpdate()
+    {
+        // Adjust the rigidbodies position and orientation in FixedUpdate.
+        Move();
+        Turn();
+    }
+
+    private void Turn()
+    {
+        // Determine the number of degrees to be turned based on the input, speed and time between frames.
+        float turn = m_TurnInputValue * rotateSpeed * Time.deltaTime;
+
+        // Make this into a rotation in the y axis.
+        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
+
+        if (m_TurnInputValue < -.8)
+        {
+            //Left wheels rotate
+            foreach (GameObject wheelL in LeftWheels)
+            {
+                wheelL.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
+            }
+            //Right wheels rotate
+            foreach (GameObject wheelR in RightWheels)
+            {
+                wheelR.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
+            }
+            //left track texture offset
+            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
+            //right track texture offset
+            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
+        }
+
+        // Apply this rotation to the rigidbody's rotation.
+        rb.MoveRotation(rb.rotation * turnRotation);
+    }
+
+    private void Move()
+    {
+        // Create a vector in the direction the tank is facing with a magnitude based on the input, speed and the time between frames.
+        Vector3 movement = transform.forward * m_MovementInputValue * forwardSpeed * Time.deltaTime;
+        
+        if (m_MovementInputValue > .8)
+        {
+            foreach (GameObject wheelL in LeftWheels)
+            {
+                wheelL.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
+            }
+            //Right wheels rotate
+            foreach (GameObject wheelR in RightWheels)
+            {
+                wheelR.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
+            }
+            //left track texture offset
+            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
+            //right track texture offset
+            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
+        }
+        if (m_MovementInputValue < -.8)
+        {
+            foreach (GameObject wheelL in LeftWheels)
+            {
+                wheelL.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
+            }
+            //Right wheels rotate
+            foreach (GameObject wheelR in RightWheels)
+            {
+                wheelR.transform.Rotate(new Vector3(wheelsSpeed, 0f, 0f));
+            }
+            //left track texture offset
+            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
+            //right track texture offset
+            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
+        }
+        if (m_TurnInputValue > .8)
+        {
+            //Left wheels rotate
+            foreach (GameObject wheelL in LeftWheels)
+            {
+                wheelL.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
+            }
+            //Right wheels rotate
+            foreach (GameObject wheelR in RightWheels)
+            {
+                wheelR.transform.Rotate(new Vector3(-wheelsSpeed, 0f, 0f));
+            }
+            //left track texture offset
+            LeftTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * -tracksSpeed);
+            //right track texture offset
+            RightTrack.transform.GetComponent<Renderer>().material.mainTextureOffset += new Vector2(0f, Time.deltaTime * tracksSpeed);
+        }
+        // Apply this movement to the rigidbody's position.
+        rb.MovePosition(rb.position + movement);
+    }
+
     private void EngineAudio()
     {
         // If there is no input (the tank is stationary)...
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S))
-        {
-            // Otherwise if the tank is moving and if the idling clip is currently playing...
-            if (m_MovementAudio.clip == m_EngineIdling)
-            {
-                // ... change the clip to driving and play.
-                m_MovementAudio.clip = m_EngineDriving;
-                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
-                m_MovementAudio.Play();
-            }
-            
-        }
-        else
+        if (Mathf.Abs(m_MovementInputValue) < 0.1f && Mathf.Abs(m_TurnInputValue) < 0.1f)
         {
             // ... and if the audio source is currently playing the driving clip...
             if (m_MovementAudio.clip == m_EngineDriving)
             {
                 // ... change the clip to idling and play it.
                 m_MovementAudio.clip = m_EngineIdling;
+                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
+                m_MovementAudio.Play();
+            }
+        }
+        else
+        {
+            // Otherwise if the tank is moving and if the idling clip is currently playing...
+            if (m_MovementAudio.clip == m_EngineIdling)
+            {
+                // ... change the clip to driving and play.
+                m_MovementAudio.clip = m_EngineDriving;
                 m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
                 m_MovementAudio.Play();
             }

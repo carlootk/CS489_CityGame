@@ -105,8 +105,8 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 740
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 1
   controlID: 54
 --- !u!114 &6
@@ -129,8 +129,8 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 740
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
   controlID: 55
 --- !u!114 &7
@@ -153,8 +153,8 @@ MonoBehaviour:
     y: 0
     width: 1190
     height: 740
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
   controlID: 56
 --- !u!114 &8
@@ -252,14 +252,14 @@ MonoBehaviour:
     y: 469
     width: 1190
     height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,23 +393,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d8eafeff
-    m_LastClickedID: -70952
-    m_ExpandedIDs: 0834fbffd8eafeffdceafeffdeeafeff14ebfeff16ebfeff1609ffff5a10ffff5e10ffff6610ffff6810ffff6c10ffff6e10ffff7210ffff7410ffff7610ffff7810ffff7c10ffff7e10ffff8010ffff8210ffff8410ffff8610ffffa210ffffa610ffffaa10ffffb210ffffc610ffff0618ffff3421ffff00000000da5100004e5c00008eab0000
+    m_SelectedIDs: 246f0000
+    m_LastClickedID: 28452
+    m_ExpandedIDs: ccfbffff00000000246f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Player
-      m_OriginalName: Player
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 43918
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.08850015, y: -0.2477178, z: 0.022729618, w: 0.9645139}
     speed: 2
-    m_Value: {x: 0.08850015, y: -0.2477178, z: 0.022729618, w: 0.9645139}
+    m_Value: {x: -0.08850016, y: 0.2477178, z: -0.02272962, w: -0.96451396}
   m_Size:
     m_Target: 17.295536
     speed: 2
@@ -670,20 +670,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Completed-Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/_Completed-Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\CLo\Documents\CS489_CityGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c0842800
-    m_LastClickedID: 2655424
-    m_ExpandedIDs: 0000000078350000ce3500004236000096360000ec36000074380000143a0000b23a00001ccc00001ecc000020cc000022cc00005ece270060ce270000ca9a3b
+    scrollPos: {x: 0, y: 295}
+    m_SelectedIDs: 102d0000
+    m_LastClickedID: 11536
+    m_ExpandedIDs: 000000001a2a0000922a00000c2b00006e2b0000a62b0000062c00009e2f0000b8c20000bac20000bcc20000bec20000c0c20000c2c20000c4c2000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -711,7 +711,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000783500004236000086360000ec360000b237000074380000143a00002c3a0000b23a0000863b00001ccc00001ecc000020cc000022cc0000
+    m_ExpandedIDs: 000000001a2a0000922a00000c2b00006e2b0000a62b0000062c00009e2f0000b8c20000bac20000bcc20000bec20000c0c20000c2c20000c4c20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -736,24 +736,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 246f0000
+    m_LastClickedInstanceID: 28452
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000863c0100a423010072fadcff163600007a5c00007c5b0000045f0000c22a00006e2a0000942d0000722e0000002b0000126005005c2c00002c6a1c0000000000be2a00004a2b00007ee10100362f00006ee101001ee101004ce20100dce10100e02a000052300900723009005a3009007a300900823009006c2b0000c62b00005e3300000e2d0000dc330000562c05007e39000076ce2700
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TankHealth
-      m_OriginalName: TankHealth
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 2608716
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
