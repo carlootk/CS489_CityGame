@@ -72,8 +72,10 @@
     <Compile Include="Assets\MC-1 USSR Toon Tank Big\Scripts\CameraOrbit.cs" />
     <Compile Include="Assets\MC-1 USSR Toon Tank Big\Scripts\SimpleControl.cs" />
     <Compile Include="Assets\Scripts\Action.cs" />
+    <Compile Include="Assets\Scripts\ActiveStateDecision.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\ChaseAction.cs" />
     <Compile Include="Assets\Scripts\Decision.cs" />
     <Compile Include="Assets\Scripts\DestroyParticle.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
