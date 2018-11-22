@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/CLo/Downloads/TanksPluggableAI/TanksPluggableAI/Assets/_Complete-Game.unity
+- path: Assets/Scenes/Game.unity
   isLoaded: 1
   isActive: 1

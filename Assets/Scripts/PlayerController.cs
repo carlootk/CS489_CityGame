@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
@@ -12,10 +7,9 @@ public class PlayerController : MonoBehaviour
     private Camera cam;
     private Rigidbody rb;
     public Transform turretTransform;
-    private CharacterController characterController;
     public GunController gunC;
-    public Text points;
-    public GameObject panel;
+    public Material tankMaterial;
+
 
     public GameObject[] LeftWheels;
     //all right wheels
@@ -43,7 +37,6 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         cam = FindObjectOfType<Camera>();
-        panel.SetActive(false);
         m_OriginalPitch = m_MovementAudio.pitch;
 
     }
@@ -76,15 +69,18 @@ public class PlayerController : MonoBehaviour
             gunC.isFiring = false;
         }
 
-        if (GameObject.FindWithTag("Trash") == null)
-        {
-            panel.SetActive(true);
-            StartCoroutine(WaitForIt(3.0F));
-        }
-
-        points.text = GameObject.FindGameObjectsWithTag("Trash").Length.ToString() + " left";
+        
 
         EngineAudio();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("FloorTile"))
+        {
+            Renderer rend = other.GetComponent<Renderer>();
+            rend.material = tankMaterial;
+        }
     }
 
     private void FixedUpdate()
@@ -209,10 +205,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator WaitForIt(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(0);
-
-    }
+    
 }

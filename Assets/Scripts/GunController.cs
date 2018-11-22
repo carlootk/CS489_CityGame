@@ -24,14 +24,22 @@ public class GunController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isFiring && Time.time > nextFire) {
-			nextFire = Time.time + fireRate;
-			muzzleParticle.Play();
-            gunAudio.clip = gunFire;
-            gunAudio.Play();
-			var newBullet = (GameObject)Instantiate(bulletPrefab, gunEnd.position, gunEnd.rotation);
-			newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.up * bulletSpeed;
-			Destroy(newBullet, 2.0f);
+		if (isFiring) {
+            Fire();
 		}
 	}
+
+    public void Fire()
+    {
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            muzzleParticle.Play();
+            gunAudio.clip = gunFire;
+            gunAudio.Play();
+            var newBullet = (GameObject)Instantiate(bulletPrefab, gunEnd.position, gunEnd.rotation);
+            newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.up * bulletSpeed;
+        }
+        
+    }
 }

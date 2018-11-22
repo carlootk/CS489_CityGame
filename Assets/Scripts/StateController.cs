@@ -10,14 +10,17 @@ public class StateController : MonoBehaviour
 
     public EnemyStats enemyStats;
     public Transform eyes;
+    public Transform turret;
     public State currentState;
     public State remainState;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public Complete.TankShooting tankShooting;
+    [HideInInspector] public GunController gunTankShooting;
     public List<Transform> wayPointList;
     [HideInInspector] public int nextWayPoint;
     [HideInInspector] public Transform chaseTarget;
+    [HideInInspector] public float stateTimeElapsed;
 
     private bool aiActive;
 
@@ -25,6 +28,7 @@ public class StateController : MonoBehaviour
     void Awake()
     {
         tankShooting = GetComponent<Complete.TankShooting>();
+        gunTankShooting = GetComponent<GunController>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -60,7 +64,19 @@ public class StateController : MonoBehaviour
         if (nextState != remainState)
         {
             currentState = nextState;
+            OnExitState();
         }
+    }
+
+    public bool CheckIfCountDownElapsed(float duration)
+    {
+        stateTimeElapsed += Time.deltaTime;
+        return (stateTimeElapsed >= duration);
+    }
+
+    private void OnExitState()
+    {
+        stateTimeElapsed = 0;
     }
 
 }

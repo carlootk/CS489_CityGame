@@ -230,7 +230,6 @@ GameObject:
   - component: {fileID: 11409376}
   - component: {fileID: 11488788}
   - component: {fileID: 195979757215206982}
-  - component: {fileID: 114553334035144306}
   m_Layer: 9
   m_Name: AITankChaser
   m_TagString: Player
@@ -10435,18 +10434,6 @@ Transform:
   m_Father: {fileID: 446194}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114553334035144306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf848b0978206e4d88eab5c13d734ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: []
 --- !u!195 &195979757215206982
 NavMeshAgent:
   m_ObjectHideFlags: 1

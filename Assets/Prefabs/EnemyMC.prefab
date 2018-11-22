@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4118128847322518}
   m_Layer: 0
-  m_Name: LeftWheel1_bone
+  m_Name: ELeftWheel1_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4786975730453164}
   m_Layer: 0
-  m_Name: RightWheel13_Bone
+  m_Name: ERightWheel13_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4502772916374514}
   m_Layer: 0
-  m_Name: LeftWheel2_bone
+  m_Name: ELeftWheel2_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4640851106577610}
   m_Layer: 0
-  m_Name: RightWheel2_Bone
+  m_Name: ERightWheel2_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4628139931534102}
   m_Layer: 0
-  m_Name: RightWheel6_Bone
+  m_Name: ERightWheel6_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4833835482736008}
   m_Layer: 0
-  m_Name: LeftWheel4_bone
+  m_Name: ELeftWheel4_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4961643482505710}
   m_Layer: 0
-  m_Name: RightWheel3_Bone
+  m_Name: ERightWheel3_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4034424073592704}
   m_Layer: 0
-  m_Name: LeftWheel5_bone
+  m_Name: ELeftWheel5_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4194687734357088}
   m_Layer: 0
-  m_Name: LeftWheel8_bone
+  m_Name: ELeftWheel8_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4930375642696148}
   m_Layer: 0
-  m_Name: LeftWheel10_bone
+  m_Name: ELeftWheel10_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4741340993156860}
   m_Layer: 0
-  m_Name: RightWheel10_Bone
+  m_Name: ERightWheel10_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4324428969035216}
   m_Layer: 0
-  m_Name: RightWheel5_Bone
+  m_Name: ERightWheel5_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4628437617355376}
   m_Layer: 0
-  m_Name: LeftWheel13_bone
+  m_Name: ELeftWheel13_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4329203006177804}
   m_Layer: 0
-  m_Name: RightWheel4_Bone
+  m_Name: ERightWheel4_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,7 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4535398193323192}
   m_Layer: 0
-  m_Name: RightWheel11_Bone
+  m_Name: ERightWheel11_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135436557152558}
   m_Layer: 0
-  m_Name: RightWheel9_Bone
+  m_Name: ERightWheel9_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4164510814404212}
   m_Layer: 0
-  m_Name: LeftWheel9_bone
+  m_Name: ELeftWheel9_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -336,7 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4469916001628394}
   m_Layer: 0
-  m_Name: LeftWheel6_bone
+  m_Name: ELeftWheel6_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4983896427583716}
   m_Layer: 0
-  m_Name: RightWheel7_Bone
+  m_Name: ERightWheel7_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4725923648528600}
   m_Layer: 0
-  m_Name: LeftWheel3_bone
+  m_Name: ELeftWheel3_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,7 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4250363630265272}
   m_Layer: 0
-  m_Name: RightWheel12_Bone
+  m_Name: ERightWheel12_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,7 +411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4448246239668068}
   m_Layer: 0
-  m_Name: LeftWheel12_bone
+  m_Name: ELeftWheel12_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4751595439839510}
   m_Layer: 0
-  m_Name: LeftWheel7_bone
+  m_Name: ELeftWheel7_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4624381488169988}
   m_Layer: 0
-  m_Name: LeftWheel11_bone
+  m_Name: ELeftWheel11_bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -588,7 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4564042800872220}
   m_Layer: 0
-  m_Name: RightWheel1_Bone
+  m_Name: ERightWheel1_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,7 +603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4321759168208542}
   m_Layer: 0
-  m_Name: RightWheel8_Bone
+  m_Name: ERightWheel8_Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -655,13 +655,17 @@ GameObject:
   - component: {fileID: 82762231842924986}
   - component: {fileID: 82694024285967208}
   - component: {fileID: 195311798991766784}
+  - component: {fileID: 114452669870530636}
+  - component: {fileID: 114192783288451950}
+  - component: {fileID: 114710328958675994}
+  - component: {fileID: 114600545007732172}
   m_Layer: 0
   m_Name: EnemyMC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4017319520799664
 Transform:
   m_ObjectHideFlags: 1
@@ -1264,7 +1268,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 8feaf48067efb154d979fd1800eeea20, type: 2}
+  - {fileID: 2100000, guid: d1281c8f107230b418f9448449a672ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1299,7 +1303,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 8feaf48067efb154d979fd1800eeea20, type: 2}
+  - {fileID: 2100000, guid: d1281c8f107230b418f9448449a672ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1568,6 +1572,108 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114192783288451950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993553218547536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09fa12b79cc118469f06f366563ee1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 187e7d0e25043be489a95f03183071d2, type: 2}
+  eyes: {fileID: 4103025281256890}
+  currentState: {fileID: 11400000, guid: 047e0de8c9989d841bf3c82b97a515d7, type: 2}
+  remainState: {fileID: 11400000, guid: 8a62fa434e95432449f7fdeea7e17a2a, type: 2}
+  navMeshAgent: {fileID: 0}
+  tankShooting: {fileID: 0}
+  gunTankShooting: {fileID: 0}
+  wayPointList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nextWayPoint: 0
+  chaseTarget: {fileID: 0}
+  stateTimeElapsed: 0
+--- !u!114 &114452669870530636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993553218547536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d480a43d190bdb14eb179c08057108e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFiring: 0
+  bulletPrefab: {fileID: 1164421490473424, guid: a5971b3095328b74c97df4d7e482cb41,
+    type: 2}
+  bulletSpeed: 30
+  fireRate: 1
+  gunEnd: {fileID: 4017319520799664}
+  muzzleParticle: {fileID: 198242912158635020}
+  gunFire: {fileID: 8300000, guid: f402b1c66b2bac64b9afbe1db15ea830, type: 3}
+  gunAudio: {fileID: 82694024285967208}
+--- !u!114 &114600545007732172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993553218547536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54541fb5f2f20104ca1e109cae3ed532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftWheels:
+  - {fileID: 1042299803105868}
+  - {fileID: 1078728634957100}
+  - {fileID: 1473108929053130}
+  - {fileID: 1189898593445456}
+  - {fileID: 1239006264728268}
+  - {fileID: 1453847619388610}
+  - {fileID: 1699545640071392}
+  - {fileID: 1314419456016198}
+  - {fileID: 1424937926806346}
+  - {fileID: 1318633101228046}
+  - {fileID: 1703957800427120}
+  - {fileID: 1540352729495044}
+  - {fileID: 1381314819813944}
+  RightWheels:
+  - {fileID: 1895548244605818}
+  - {fileID: 1153606323254198}
+  - {fileID: 1229007046910702}
+  - {fileID: 1387909727393692}
+  - {fileID: 1364561347209756}
+  - {fileID: 1172448024643920}
+  - {fileID: 1454765865379230}
+  - {fileID: 1905489357256918}
+  - {fileID: 1405406047663044}
+  - {fileID: 1350960390000284}
+  - {fileID: 1395814914075456}
+  - {fileID: 1516759172764262}
+  - {fileID: 1068384416203424}
+  LeftTrack: {fileID: 1757126141168776}
+  RightTrack: {fileID: 1828403605230322}
+  wheelsSpeed: 2
+  tracksSpeed: 2
+--- !u!114 &114710328958675994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993553218547536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8591c261ef17a04fb105abf74556a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 3
+  explodeSound: {fileID: 8300000, guid: be9a48caa475c684a848ca1b51639026, type: 3}
+  hitFlash: {fileID: 19807510, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 2}
 --- !u!137 &137198097502244184
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1583,8 +1689,8 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 77e775e1dac2aee4999b03ad95a721d2, type: 2}
-  - {fileID: 2100000, guid: 8feaf48067efb154d979fd1800eeea20, type: 2}
+  - {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
+  - {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

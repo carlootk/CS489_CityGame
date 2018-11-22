@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Trash
+  - FloorTile
   layers:
   - Default
   - TransparentFX
