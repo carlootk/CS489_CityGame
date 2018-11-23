@@ -41,7 +41,7 @@ public class BulletController : MonoBehaviour
         if (other.gameObject.CompareTag("FloorTile"))
         {
             Renderer rend = other.gameObject.GetComponent<Renderer>();
-            sb.UpdateCounts(rend.material, bulletMaterial);
+            sb.UpdateCounts(rend.sharedMaterial, bulletMaterial);
             rend.material = bulletMaterial;
         }
 

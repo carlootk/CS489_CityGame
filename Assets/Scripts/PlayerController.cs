@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("FloorTile"))
         {
             Renderer rend = other.GetComponent<Renderer>();
-            sb.UpdateCounts(rend.material, tankMaterial);
+            sb.UpdateCounts(rend.sharedMaterial, tankMaterial);
             rend.material = tankMaterial;
         }
     }
