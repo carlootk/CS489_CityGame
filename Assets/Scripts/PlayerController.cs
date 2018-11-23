@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
-        cam = FindObjectOfType<Camera>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         m_OriginalPitch = m_MovementAudio.pitch;
 
     }

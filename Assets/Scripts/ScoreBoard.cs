@@ -34,19 +34,10 @@ public class ScoreBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (GameObject.FindWithTag("Trash") == null)
-        {
-            panel.SetActive(true);
-            StartCoroutine(WaitForIt(3.0F));
-        }
-
         greenScore.text = Mathf.Round(p1Tiles / totalTiles * 100).ToString() + "%";
         redScore.text = Mathf.Round(p2Tiles / totalTiles * 100).ToString() + "%";
         blueScore.text = Mathf.Round(p3Tiles / totalTiles * 100).ToString() + "%";
         yellowScore.text = Mathf.Round(p4Tiles / totalTiles * 100).ToString() + "%";
-
-
     }
 
     public void UpdateCounts(Material oldMaterial, Material newMaterial)

@@ -665,7 +665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4017319520799664
 Transform:
   m_ObjectHideFlags: 1
@@ -1585,6 +1585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 187e7d0e25043be489a95f03183071d2, type: 2}
   eyes: {fileID: 4103025281256890}
+  turret: {fileID: 4672456747026720}
   currentState: {fileID: 11400000, guid: 047e0de8c9989d841bf3c82b97a515d7, type: 2}
   remainState: {fileID: 11400000, guid: 8a62fa434e95432449f7fdeea7e17a2a, type: 2}
   navMeshAgent: {fileID: 0}
@@ -1609,7 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFiring: 0
-  bulletPrefab: {fileID: 1164421490473424, guid: a5971b3095328b74c97df4d7e482cb41,
+  bulletPrefab: {fileID: 1194606964699568, guid: 1ce94d54e46537f4bb76286d798ba51c,
     type: 2}
   bulletSpeed: 30
   fireRate: 1
@@ -1628,6 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54541fb5f2f20104ca1e109cae3ed532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tankMaterial: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
   LeftWheels:
   - {fileID: 1042299803105868}
   - {fileID: 1078728634957100}
@@ -1656,10 +1658,15 @@ MonoBehaviour:
   - {fileID: 1395814914075456}
   - {fileID: 1516759172764262}
   - {fileID: 1068384416203424}
+  sb: {fileID: 0}
   LeftTrack: {fileID: 1757126141168776}
   RightTrack: {fileID: 1828403605230322}
   wheelsSpeed: 2
   tracksSpeed: 2
+  m_MovementAudio: {fileID: 82762231842924986}
+  m_EngineIdling: {fileID: 8300000, guid: 4932ab25b84dd7649b80af68a9660ddc, type: 3}
+  m_EngineDriving: {fileID: 8300000, guid: d7ca9fb5aa30155449192b23d7fb3336, type: 3}
+  m_PitchRange: 0.2
 --- !u!114 &114710328958675994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1760,10 +1767,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 10
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
