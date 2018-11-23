@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 1
   hitForce: 100
+  sb: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 6e5704f70d77bd1479244aff528ccf58, type: 3}
   bulletMaterial: {fileID: 2100000, guid: c39933e60e73205419d1f79a2af1fdac, type: 2}
 --- !u!135 &135331429105888430

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Transform turretTransform;
     public GunController gunC;
     public Material tankMaterial;
+    public ScoreBoard sb;
 
 
     public GameObject[] LeftWheels;
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("FloorTile"))
         {
             Renderer rend = other.GetComponent<Renderer>();
+            sb.UpdateCounts(rend.material, tankMaterial);
             rend.material = tankMaterial;
         }
     }

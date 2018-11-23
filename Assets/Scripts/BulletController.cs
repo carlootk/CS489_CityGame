@@ -8,12 +8,14 @@ public class BulletController : MonoBehaviour
 
     public int bulletDamage;
     public float hitForce = 100f;
+    public ScoreBoard sb;
     public AudioClip hitSound;
     public Material bulletMaterial;
 
     // Use this for initialization
     void Start()
     {
+        sb = GameObject.FindGameObjectWithTag("ScoreBoard").GetComponent<ScoreBoard>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class BulletController : MonoBehaviour
         if (other.gameObject.CompareTag("FloorTile"))
         {
             Renderer rend = other.gameObject.GetComponent<Renderer>();
+            sb.UpdateCounts(rend.material, bulletMaterial);
             rend.material = bulletMaterial;
         }
 

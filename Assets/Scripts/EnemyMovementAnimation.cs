@@ -10,6 +10,7 @@ public class EnemyMovementAnimation : MonoBehaviour
     public GameObject[] LeftWheels;
     //all right wheels
     public GameObject[] RightWheels;
+    public ScoreBoard sb;
 
     public GameObject LeftTrack;
 
@@ -42,10 +43,11 @@ public class EnemyMovementAnimation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered");
+
         if (other.CompareTag("FloorTile"))
         {
             Renderer rend = other.GetComponent<Renderer>();
+            sb.UpdateCounts(rend.material, tankMaterial);
             rend.material = tankMaterial;
         }
     }
