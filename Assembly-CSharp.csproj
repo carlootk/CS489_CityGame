@@ -72,6 +72,7 @@
     <Compile Include="Assets\ColorChange.cs" />
     <Compile Include="Assets\MC-1 USSR Toon Tank Big\Scripts\CameraOrbit.cs" />
     <Compile Include="Assets\MC-1 USSR Toon Tank Big\Scripts\SimpleControl.cs" />
+    <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\Scripts\Action.cs" />
     <Compile Include="Assets\Scripts\ActiveStateDecision.cs" />
     <Compile Include="Assets\Scripts\AttackAction.cs" />
@@ -95,10 +96,26 @@
     <Compile Include="Assets\Scripts\StateController.cs" />
     <Compile Include="Assets\Scripts\Transition.cs" />
     <Compile Include="Assets\WayPointMoverTest.cs" />
-    <None Include="Assets\ToonSoldiers_demo\ToonSoldiers_demo.txt" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wood-877000.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\patch-924648.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\brick-957827.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wood-877365.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\stone-805287.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\brick-957823.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\brick-807728.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wood-938698.shader" />
     <None Include="Assets\Simple city plain\Read_me.txt" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\README.txt" />
     <None Include="Assets\Fonts\Bowlby_One\FontLicense.txt" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wall-846013.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\tile-846018.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\bricks-868344.shader" />
     <None Include="Assets\MC-1 USSR Toon Tank Big\README.txt" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\texture-709723.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wall-617961.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wall-846015.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\wood-731407.shader" />
+    <None Include="Assets\HighQualityBricks&amp;Walls\Shaders\shading-671263.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/CLo/Documents/CS489_CityGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -11,6 +11,8 @@ public class BulletController : MonoBehaviour
     public ScoreBoard sb;
     public AudioClip hitSound;
     public Material bulletMaterial;
+    public float m_MaxLifeTime = 2f;
+//    public ParticleSystem m_ExplosionParticles;
 
     // Use this for initialization
     void Start()
@@ -35,7 +37,7 @@ public class BulletController : MonoBehaviour
         }
         if (other.GetComponent<Rigidbody>() != null)
         {
-            other.GetComponent<Rigidbody>().AddForce(transform.up * hitForce);
+            other.GetComponent<Rigidbody>().AddForce(transform.forward * hitForce);
         }
 
         if (other.gameObject.CompareTag("FloorTile"))
@@ -44,6 +46,10 @@ public class BulletController : MonoBehaviour
             sb.UpdateCounts(rend.sharedMaterial, bulletMaterial);
             rend.material = bulletMaterial;
         }
+        
+        //m_ExplosionParticles.transform.parent = null;
+        //m_ExplosionParticles.Play();
+        
 
         Destroy(gameObject);
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour {
 
 	public bool isFiring;
-	public GameObject bulletPrefab;
+	public Rigidbody bulletPrefab;
 	public float bulletSpeed;
 	public float fireRate;
 	private float nextFire;
@@ -37,8 +37,8 @@ public class GunController : MonoBehaviour {
             muzzleParticle.Play();
             gunAudio.clip = gunFire;
             gunAudio.Play();
-            var newBullet = (GameObject)Instantiate(bulletPrefab, gunEnd.position, gunEnd.rotation);
-            newBullet.GetComponent<Rigidbody>().velocity = newBullet.transform.up * bulletSpeed;
+            Rigidbody newBullet = Instantiate(bulletPrefab, gunEnd.position, gunEnd.rotation) as Rigidbody;
+            newBullet.velocity = gunEnd.transform.forward * bulletSpeed;
         }
         
     }

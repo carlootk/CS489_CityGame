@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1194606964699568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.653814, y: 1.3943202, z: -11.414722}
+  m_LocalPosition: {x: 0, y: 10.93, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,6 +117,7 @@ MonoBehaviour:
   sb: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 6e5704f70d77bd1479244aff528ccf58, type: 3}
   bulletMaterial: {fileID: 2100000, guid: c39933e60e73205419d1f79a2af1fdac, type: 2}
+  m_MaxLifeTime: 2
 --- !u!135 &135331429105888430
 SphereCollider:
   m_ObjectHideFlags: 1
