@@ -16,17 +16,21 @@ public class AttackAction : Action
     {
         RaycastHit hit;
 
-        Debug.DrawRay(controller.eyes.position, controller.eyes.forward.normalized * controller.enemyStats.attackRange, Color.red);
-
-        if (Physics.SphereCast(controller.eyes.position, controller.enemyStats.lookSphereCastRadius, controller.eyes.forward, out hit, controller.enemyStats.attackRange) && hit.collider.CompareTag("Player"))
+        foreach (Transform eye in controller.eyes)
         {
+            Debug.DrawRay(eye.position, eye.forward.normalized * controller.enemyStats.attackRange, Color.red);
+
+            if (Physics.SphereCast(eye.position, controller.enemyStats.lookSphereCastRadius, eye.forward, out hit, controller.enemyStats.attackRange) && hit.collider.CompareTag("Player"))
+            {
                 controller.turret.LookAt(new Vector3(controller.chaseTarget.position.x, controller.turret.position.y, controller.chaseTarget.position.z));
                 //if (controller.CheckIfCountDownElapsed(controller.enemyStats.attackRate))
                 //{
                 controller.gunTankShooting.Fire();
                 //}
 
+            }
         }
+            
     }
 
 }

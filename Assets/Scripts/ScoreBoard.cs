@@ -24,6 +24,7 @@ public class ScoreBoard : MonoBehaviour
     private int p4Tiles;
     private float totalTiles;
     public float maxTime;
+    private float adjustedMaxTime;
     private float countdownTimer;
     private float lastTimestamp;
     private float[] percents = new float[4];
@@ -31,6 +32,7 @@ public class ScoreBoard : MonoBehaviour
     private bool gameOver;
 
     // Use this for initialization
+
     void Start()
     {
 
@@ -38,8 +40,9 @@ public class ScoreBoard : MonoBehaviour
         panel.SetActive(false);
         totalTiles = GameObject.FindGameObjectsWithTag("FloorTile").Length;
         countdownTimer = maxTime;
+        adjustedMaxTime = Time.time + maxTime;
         timerText.text = ((int)countdownTimer / 60).ToString() + ":" + ((int)countdownTimer % 60).ToString("00");
-
+        Debug.Log("Start called");
     }
 
 
@@ -69,9 +72,10 @@ public class ScoreBoard : MonoBehaviour
             timerText.text = minutes.ToString() + ":" + seconds.ToString("00");
         }
 
-        if (Time.time >= maxTime + 1 && !gameOver)
+        if (Time.time > adjustedMaxTime && !gameOver)
         {
             gameOver = true;
+            timerText.text = "0:00";
             ShowWinner();
             StartCoroutine("EndGame", 10f);
         }
@@ -79,6 +83,7 @@ public class ScoreBoard : MonoBehaviour
 
     private void ShowWinner()
     {
+        Debug.Log("Why??!?!?");
         String winner = "";
         float max = 0;
         int winPos = 0;
@@ -136,7 +141,7 @@ public class ScoreBoard : MonoBehaviour
     IEnumerator EndGame(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-
+        panel.SetActive(false);
         SceneManager.LoadScene(0);
 
     }

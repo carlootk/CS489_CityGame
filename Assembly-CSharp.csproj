@@ -70,7 +70,7 @@
     <Compile Include="Assets\_Completed-Assets\Scripts\Tank\TankShooting.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\UI\UIDirectionControl.cs" />
     <Compile Include="Assets\ColorChange.cs" />
-    <Compile Include="Assets\MC-1 USSR Toon Tank Big\Scripts\CameraOrbit.cs" />
+    <Compile Include="Assets\Fabulous_trees\ground\scripts\WaterfallTextures.cs" />
     <Compile Include="Assets\MC-1 USSR Toon Tank Big\Scripts\SimpleControl.cs" />
     <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\Scripts\Action.cs" />

@@ -9,10 +9,12 @@ public class StateController : MonoBehaviour
 
 
     public EnemyStats enemyStats;
-    public Transform eyes;
+    public Transform[] eyes;
+    public Transform[] groundEyes;
     public Transform turret;
     public State currentState;
     public State remainState;
+    public bool stopped = false;
 
     [HideInInspector] public NavMeshAgent navMeshAgent;
     [HideInInspector] public Complete.TankShooting tankShooting;
@@ -55,7 +57,15 @@ public class StateController : MonoBehaviour
         if (currentState != null && eyes != null)
         {
             Gizmos.color = currentState.sceneGizmoColor;
-            Gizmos.DrawWireSphere(eyes.position, enemyStats.lookSphereCastRadius);
+            foreach (Transform eye in eyes)
+            {
+                Gizmos.DrawWireSphere(eye.position, enemyStats.lookSphereCastRadius);
+            }
+            foreach (Transform eye in groundEyes)
+            {
+                Gizmos.DrawWireSphere(eye.position, enemyStats.lookSphereCastRadius);
+            }
+            
         }
     }
 
